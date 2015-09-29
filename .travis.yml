@@ -3,7 +3,7 @@ script: ant -buildfile "./strutsCheck/build.xml"
 sudo: false
 deploy:
   provider: cloudfoundry
-  edge: true
+  #edge: true
   api: https://api.run.pivotal.io
   username: ravionlineragh@gmail.com
   password:
