@@ -25,7 +25,7 @@
 </target>
 
 <target name="warBuild" depends="makejar">
-   <war destfile="chkStruts.war" webxml="WebContent/WEB-INF/web.xml">
+   <war destfile="../chkStruts.war" webxml="WebContent/WEB-INF/web.xml">
       <fileset dir="WebContent">
          <include name="**/*.*"/>
       </fileset>
