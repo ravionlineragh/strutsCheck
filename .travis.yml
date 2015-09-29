@@ -1,3 +1,9 @@
 language: java
 script: ant -buildfile "./strutsCheck/build.xml"
 sudo: false
+deploy:
+  provider: gcs
+  access_key_id: "GOOGTIDBSCG3L7ITCGBI"
+  secret_access_key: "US119RYCrFhCrDwOd4R86sFQokHdLzUmsi3MRS6v"
+  bucket: "strutscheck_travisdeploy"
+  skip_cleanup: true
