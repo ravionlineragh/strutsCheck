@@ -1,3 +1,3 @@
 applications:
   - name: strutsCheck
-  - buildpack: chkStruts.war
+  - buildpack: /home/travis/build/ravionlineragh/strutsCheck/strutsCheck/chkStruts.war
