@@ -20,9 +20,7 @@
 <target name="makejar" depends="compile">
   <echo>Inside the makejar of the buildxml</echo>
   <jar destfile="build/jar/test.jar" basedir="build/classes">
-    <manifest>
-      <attribute name="Main-Class" value="com.test.Testing"></attribute>
-    </manifest>
+   
   </jar>
 </target>
 
