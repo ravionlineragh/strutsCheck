@@ -11,5 +11,4 @@ deploy:
   space: development
   on:
     repo: ravionlineragh/strutsCheck
-    branch: 'strutsCheck'
   edge: true
