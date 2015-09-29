@@ -1,0 +1,41 @@
+<project name="strutsCheck" default="chkHere" basedir=".">
+<description> this is a test build xml</description>
+
+<target name="chkHere" depends="warBuild">
+  <echo>Inside the chkhere of the buildxml</echo>
+</target>
+
+<target name="clean">
+  <echo>Inside the clean of the buildxml</echo>
+  <delete dir="build" />
+  <mkdir dir="build/classes" />
+  <mkdir dir="build/jar" />
+</target>
+
+<target name="compile" depends="clean">
+  <echo>Inside the compile of the buildxml</echo>
+  <javac srcdir="src" destdir="build/classes"></javac>
+</target>
+
+<target name="makejar" depends="compile">
+  <echo>Inside the makejar of the buildxml</echo>
+  <jar destfile="build/jar/test.jar" basedir="build/classes">
+    <manifest>
+      <attribute name="Main-Class" value="com.test.Testing"></attribute>
+    </manifest>
+  </jar>
+</target>
+
+<target name="warBuild" depends="makejar">
+   <war destfile="chkStruts.war" webxml="WebContent/WEB-INF/web.xml">
+      <fileset dir="WebContent">
+         <include name="**/*.*"/>
+      </fileset>
+      <lib dir="WebContent/WEB-INF/lib">
+         <include name="**/*.*"/>
+      </lib>
+      <classes dir="build/classes"/>
+   </war>
+</target>
+
+</project>
