@@ -34,5 +34,6 @@
       </lib>
       <classes dir="build/classes"/>
    </war>
+   <delete dir="build"></delete>
 </target>
 </project>
