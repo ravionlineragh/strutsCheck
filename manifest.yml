@@ -1,3 +1,4 @@
 applications:
   - name: strutsCheck
-buildpack: https://github.com/cloudfoundry/java-buildpack
+path: chkStruts.war
+buildpack: https://github.com/cloudfoundry/java-buildpack.git
